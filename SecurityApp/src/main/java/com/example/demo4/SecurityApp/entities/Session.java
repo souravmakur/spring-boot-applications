@@ -22,7 +22,7 @@ public class Session {
     String refreshToken;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column
+    @JoinColumn(name = "user_id")
     User user;
 
     @Column
